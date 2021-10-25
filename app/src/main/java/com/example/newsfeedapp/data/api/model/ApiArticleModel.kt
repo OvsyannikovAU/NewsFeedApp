@@ -4,21 +4,21 @@ import com.google.gson.annotations.SerializedName
 
 data class ApiArticleModel(
     @SerializedName("source")
-    val source: ApiSourceModel,
+    val source: ApiSourceModel?,
     @SerializedName("author")
-    val author : String,
+    val author : String?,
     @SerializedName("title")
-    val title: String,
+    val title: String?,
     @SerializedName("description")
     val description: String,
     @SerializedName("url")
     val url: String,
     @SerializedName("urlToImage")
-    val urlToImage: String,
+    val urlToImage: String?,
     @SerializedName("publishedAt")
-    val publishedAt: String,
+    val publishedAt: String?,
     @SerializedName("content")
-    val content: String
+    val content: String?
 )
 
 //{
@@ -38,3 +38,15 @@ data class ApiArticleModel(
 //    "publishedAt": "2021-09-16T13:26:42Z",
 //    "content": "You won't have to stick to Bitcoin if you're determined to pay for your movie ticket with cryptocurrency. AMC chief Adam Aron has revealed his theater chain will also accept Ethereum, Litecoin and Bi… [+1198 chars]"
 //},
+
+
+/*
+{
+    "id": "abc-news",
+    "name": "ABC News",
+    "description": "Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com.",
+    "url": "https://abcnews.go.com",
+    "category": "general",
+    "language": "en",
+    "country": "us"
+},*/

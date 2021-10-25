@@ -15,13 +15,13 @@ fun ApiSourceModel.toDomain(): NewsDomainSourceModel {
 
 fun ApiArticleModel.toDomain(): NewsDomainModel {
     return NewsDomainModel(
-        author = author,
-        source = source.toDomain(),
-        title = title,
+        author = author ?: "null",
+        source = source!!.toDomain(),
+        title = title ?: "null",
         url = url,
         description = description,
-        urlToImage = urlToImage,
-        content = content,
-        publishedAt = publishedAt
+        urlToImage = urlToImage ?: "null",
+        content = content ?: "null",
+        publishedAt = publishedAt ?: "null"
     )
 }
